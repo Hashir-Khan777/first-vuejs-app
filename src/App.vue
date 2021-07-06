@@ -6,7 +6,8 @@
       placeholder="user name"
       :value="name"
     />
-    <HelloWorld :message="name" />
+    <HelloWorld v-if="name" :message="name" />
+    <HelloWorld v-else message="Hello world" />
   </div>
 </template>
 <script>
