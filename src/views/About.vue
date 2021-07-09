@@ -5,5 +5,17 @@
       <router-link to="/about">About</router-link>
     </div>
     <h1>This is an about page</h1>
+    <h3>{{ count }}</h3>
   </div>
 </template>
+
+<script>
+export default {
+  name: "About",
+  computed: {
+    count() {
+      return this.$store.state.count;
+    },
+  },
+};
+</script>
